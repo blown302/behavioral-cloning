@@ -1,1 +1,1 @@
-writeup_template.md
+writeup_report.md
