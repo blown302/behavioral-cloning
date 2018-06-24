@@ -152,6 +152,9 @@ if __name__ == '__main__':
     # get the model with random weights for training.
     model = build_model_graph()
 
+    # show model architecture.
+    model.summary()
+
     # train the model.
     history_object = model.fit_generator(train_generator, steps_per_epoch=len(train_samples) / 32,
                                          validation_data=validation_generator,
@@ -165,6 +168,7 @@ if __name__ == '__main__':
     plt.ylabel('mean squared error loss')
     plt.xlabel('epoch')
     plt.legend(['training set', 'validation set'], loc='upper right')
+    plt.savefig('visualize_loss.png')
     plt.show()
 
     # save model as model.h5
