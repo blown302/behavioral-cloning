@@ -3,3 +3,4 @@ data
 venv
 video_files
 models
+.DS_Store
